@@ -355,7 +355,7 @@ namespace Motormoth.Chrono
             var month = (relativeDayIndex + 1 >> 5) + 1;
             var leapYear = n1y == 3 && (n4y != 24 || n100y == 3);
             var daysToMonth = leapYear ? DaysToMonth366 : DaysToMonth365;
-            while (relativeDayIndex > daysToMonth[month])
+            while (relativeDayIndex >= daysToMonth[month])
             {
                 month++;
             }
